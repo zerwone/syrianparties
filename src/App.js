@@ -1,11 +1,9 @@
-import { useState } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import { Join } from "./Pages/Join";
 import { Popup } from "./Pages/Popup";
 
 function App() {
-  const [navMenuOpen, setNavMenuOpen] = useState(false);
 
   // useEffect(() => {
   //   var addScript = document.createElement('script');
@@ -34,7 +32,7 @@ function App() {
       <div className="NavBar">
   
         <div className="logo-text">SPC</div>
-        <div className={`links ${navMenuOpen ? "active" : ""}`}>
+        <div className={`links`}>
           <Link to="/">Home</Link>
           <Link to="/contact">Contact</Link>
           <Link to="/gallery">Gallery</Link>

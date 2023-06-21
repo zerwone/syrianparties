@@ -8,20 +8,20 @@ export const Popup = () => {
     navigate("/");
   };
 
-  const jokes = [
-    "Why don't scientists trust atoms? Because they make up everything!",
-    "Why don't skeletons fight each other? They don't have the guts!",
-    "Why did the scarecrow win an award? Because he was outstanding in his field!",
-    "Why did the bicycle fall over? Because it was two-tired!",
-    "Why couldn't the leopard play hide and seek? Because he was always spotted!",
-  ];
-
   const [randomJoke, setRandomJoke] = useState("");
 
   useEffect(() => {
+    const jokes = [
+      "Why don't scientists trust atoms? Because they make up everything!",
+      "Why don't skeletons fight each other? They don't have the guts!",
+      "Why did the scarecrow win an award? Because he was outstanding in his field!",
+      "Why did the bicycle fall over? Because it was two-tired!",
+      "Why couldn't the leopard play hide and seek? Because he was always spotted!",
+    ];
+
     const randomIndex = Math.floor(Math.random() * jokes.length);
     setRandomJoke(jokes[randomIndex]);
-  }, [jokes]);
+  }, []);
 
   return (
     <div className="popup-container">

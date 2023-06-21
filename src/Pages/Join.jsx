@@ -1,64 +1,13 @@
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 const API_BASE_URL = "http://localhost:5000";
 
 export const Join = () => {
   const [detailsFormIsVisible, setDetailsFormIsVisible] = useState(true);
   const [signupFormIsVisible, setSignupFormIsVisible] = useState(false);
-  const [signupData, setSignupData] = useState({
-    date: "",
-    time: "",
-    location: "",
-    createdBy: "",
-    attending: false,
-    slots: {
-      appetizer: {
-        total: 20,
-        filled: 0,
-        participants: [],
-      },
-      mainDishes: {
-        total: 20,
-        filled: 0,
-        participants: [],
-      },
-      sideDishes: {
-        total: 20,
-        filled: 0,
-        participants: [],
-      },
-      drinks: {
-        total: 10,
-        filled: 0,
-        participants: [],
-      },
-    },
-    rsvp: {
-      responses: {
-        yes: 0,
-        no: 0,
-        maybe: 0,
-      },
-      adultGuests: {
-        confirmed: 0,
-        maybe: 0,
-      },
-      childGuests: {
-        confirmed: 0,
-        maybe: 0,
-      },
-    },
-  });
-
-  useEffect(() => {
-    // Fetch the initial signup data from the server
-    axios.get(`${API_BASE_URL}/signup`).then((response) => {
-      setSignupData(response.data);
-    });
-  }, []);
+ 
 
 
   const date = new Date("06/28/2023");
