@@ -21,7 +21,7 @@ export const Popup = () => {
   useEffect(() => {
     const randomIndex = Math.floor(Math.random() * jokes.length);
     setRandomJoke(jokes[randomIndex]);
-  }, []);
+  }, [jokes]);
 
   return (
     <div className="popup-container">

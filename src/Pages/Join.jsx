@@ -60,28 +60,7 @@ export const Join = () => {
     });
   }, []);
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setSignupData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
 
-  const handleCheckboxChange = (event) => {
-    const { name, checked } = event.target;
-    setSignupData((prevState) => ({
-      ...prevState,
-      [name]: checked,
-    }));
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    axios.post(`${API_BASE_URL}/signup`, signupData).then(() => {
-      console.log("Signup data saved successfully!");
-    });
-  };
   const date = new Date("06/28/2023");
   const formattedDate = date.toLocaleDateString("en-US", {
     weekday: "long",

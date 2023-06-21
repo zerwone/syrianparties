@@ -7,9 +7,6 @@ import { Popup } from "./Pages/Popup";
 function App() {
   const [navMenuOpen, setNavMenuOpen] = useState(false);
 
-  const toggleNavMenu = () => {
-    setNavMenuOpen(!navMenuOpen);
-  };
   // useEffect(() => {
   //   var addScript = document.createElement('script');
   //   addScript.setAttribute(

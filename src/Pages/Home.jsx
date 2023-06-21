@@ -30,13 +30,6 @@ function App() {
     showSlide(currentSlide);
   }
 
-  function prevSlide() {
-    currentSlide--;
-    if (currentSlide < 0) {
-      currentSlide = totalSlides - 1;
-    }
-    showSlide(currentSlide);
-  }
 
   // Automatically transition to the next slide every 10 seconds
   setInterval(nextSlide, 10000);
