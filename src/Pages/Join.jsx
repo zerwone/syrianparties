@@ -2,7 +2,6 @@ import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-const API_BASE_URL = "http://localhost:5000";
 
 export const Join = () => {
   const [detailsFormIsVisible, setDetailsFormIsVisible] = useState(true);
