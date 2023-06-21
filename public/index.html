@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self'">
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1120138094822309939/1120882457546334238/Pngtreegolden_moon_texture_ramadan_lantern_6111286.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Syrian Family Parties: 
+      Join us for a joyous celebration featuring a variety of activities, performances, and experiences. Enjoy cultural showcases with traditional dances, music, and storytelling, as well as a delightful culinary experience with delicious Syrian cuisine."
+    />
+    <link rel="apple-touch-icon" href="https://cdn.discordapp.com/attachments/1120138094822309939/1120882457546334238/Pngtreegolden_moon_texture_ramadan_lantern_6111286.png" />
+    
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+   
+    <title>
+      Syrian Family Parties
+    </title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <div id="translation"></div>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=google_translate"></script>
+<script>
+function google_translate (){ 
+    var opt = { 
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE, 
+        pageLanguage: "en" ,
+        includedLanguages: 'en,ar', // include this for selected languages
+    }; 
+    new google.translate.TranslateElement( opt, "translation" ); 
+} 
+
+/*  
+Display the scrollable list of languages. 
+Related to the size of current browser. 
+*/
+addEventListener( "load", function(){ 
+    if ( document.querySelector(".goog-te-menu-frame") ) { 
+    
+        document.getElementById( "translation" ).addEventListener( "click", function(){ 
+            if ( this.id === "translation" ) scrollableLanguagesList(); 
+        }); 
+        addEventListener( "resize", function(){ 
+            if ( "none" !== document.querySelector(".goog-te-menu-frame").style.display ) scrollableLanguagesList(); 
+        }); 
+    
+    } 
+}); 
+
+function scrollableLanguagesList (){ 
+    var 
+     iframe = document.querySelector( ".goog-te-menu-frame" ), 
+     doc = iframe.contentWindow.document, 
+     div = doc.body.children[ 0 ], 
+     table = div.children[ 0 ], 
+     width = div.dataset.width || parseInt( div.style.width ), 
+     rect, diff; 
+    
+    if ( ! div.dataset.width ) div.dataset.width = width; 
+    
+    if ( innerWidth < width ) { 
+        rect = table.getBoundingClientRect(); 
+        width = rect.right - rect.left; 
+        diff = width - innerWidth; 
+        
+        div.style.width = ( width - diff - 24 ) + "px"; 
+        div.style.padding = "4px 0 1em 4px"; 
+        div.style.overflowX = "scroll"; 
+    } 
+    else { 
+        div.style.width = "auto"; 
+        div.style.padding = "4px"; 
+        div.style.overflowX = "visible"; 
+    } 
+    
+    rect = div.getBoundingClientRect(); 
+    iframe.style.width = ( rect.right - rect.left ) + "px"; 
+    iframe.style.height = ( rect.bottom - rect.top ) + "px"; 
+
+} 
+</script>
+
+  </body>
+</html>
+
+
